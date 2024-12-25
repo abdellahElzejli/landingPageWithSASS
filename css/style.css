@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #73231f;
+  color: white;
+  font-family: "hind siliguri", sans-serif;
+}
+
+.wrraper {
+  min-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+.wrraper .navbar {
+  padding: 3rem 0;
+  position: relative;
+}
+.wrraper .navbar_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrraper .navbar_top--brand {
+  font-size: 2.5rem;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+.wrraper .navbar_top--brand span {
+  color: #fe974C;
+}
+.wrraper .navbar_top--brand::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  height: 0.2rem;
+  width: 1.5rem;
+  background-color: white;
+}
+.wrraper .navbar_top--toggler {
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  height: 3rem;
+  width: 3rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 99;
+}
+.wrraper .navbar_top--toggler:hover {
+  opacity: 0.8;
+}
+.wrraper .navbar_top--toggler .line {
+  background-color: white;
+  width: 100%;
+  height: 0.2rem;
+  transition: all 0.3s ease-in-out;
+}
+.wrraper .navbar_top--toggler.change .line_1 {
+  transform: rotate(45deg) translate(0.3rem, 0.8rem);
+}
+.wrraper .navbar_top--toggler.change .line_2 {
+  opacity: 0;
+  visibility: hidden;
+}
+.wrraper .navbar_top--toggler.change .line_3 {
+  transform: rotate(-45deg) translate(0.3rem, -0.8rem);
+}
+@media (min-width: 992px) {
+  .wrraper .navbar_top--toggler {
+    display: none;
+  }
+}
+.wrraper .navbar_collapse {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: calc(100% - 1rem);
+  overflow: hidden;
+  height: 0;
+  transition: all 0.3s ease-in-out;
+}
+.wrraper .navbar_collapse.show-nav {
+  height: 230px;
+}
+.wrraper .navbar_collapse--nav {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+}
+.wrraper .navbar_collapse--nav li {
+  margin: 2rem 0;
+  list-style-type: none;
+  text-align: center;
+}
+.wrraper .navbar_collapse--nav li a {
+  color: rgb(88, 88, 88);
+  text-decoration: none;
+  font-size: 1.7rem;
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 1px;
+}
+.wrraper .navbar_collapse--nav li a:hover {
+  color: #fe974C;
+}
+.wrraper .navbar_collapse--nav li a.active {
+  color: #fe974C;
+}
+@media (min-width: 992px) {
+  .wrraper .navbar_collapse--nav {
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+  }
+  .wrraper .navbar_collapse--nav li {
+    margin: 0;
+    margin-left: 4rem;
+  }
+  .wrraper .navbar_collapse--nav li a {
+    color: white;
+  }
+  .wrraper .navbar_collapse--nav li a:hover {
+    color: #fe974C;
+    opacity: 0.8;
+  }
+}
+@media (min-width: 992px) {
+  .wrraper .navbar_collapse {
+    height: auto;
+    top: calc(100% - 6.3rem);
+  }
+}
+@media (min-width: 992px) {
+  .wrraper .navbar {
+    position: relative;
+    height: auto !important;
+  }
+}
+@media (min-width: 992px) {
+  .wrraper .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.wrraper .banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 100px);
+  margin: 8rem auto;
+}
+.wrraper .banner_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  text-align: center;
+  margin-bottom: 6rem;
+}
+.wrraper .banner_content--heading {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.wrraper .banner_content--heading span {
+  color: #fe974C;
+  font-weight: 300;
+}
+.wrraper .banner_content--paragraph {
+  line-height: 1.6;
+  width: 32rem;
+  margin: 2rem auto;
+  font-size: 1.5rem;
+}
+.wrraper .banner_content--btns {
+  margin-top: 1rem;
+}
+.wrraper .banner_content--btns .btn {
+  background-color: #fe974C;
+  border: 2px solid #fe974C;
+  padding: 1rem 1rem;
+  text-transform: capitalize;
+  font-family: "hind siliguri", sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.wrraper .banner_content--btns .btn.btn-white {
+  margin-right: 1rem;
+  color: #73231f;
+}
+.wrraper .banner_content--btns .btn.btn-white:hover {
+  color: #fe974C;
+  background-color: #73231f;
+}
+.wrraper .banner_content--btns .btn.btn-transparent {
+  background-color: transparent;
+  color: #fe974C;
+}
+.wrraper .banner_content--btns .btn.btn-transparent:hover {
+  background-color: #fe974C;
+  color: #73231f;
+}
+.wrraper .banner_content--icons {
+  margin-top: 5rem;
+  display: flex;
+}
+.wrraper .banner_content--icons a {
+  display: inline-block;
+  text-decoration: none;
+  color: #73231f;
+  background-color: white;
+  width: 34px;
+  height: 34px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.5rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.wrraper .banner_content--icons a:hover {
+  color: #fe974C;
+  box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 992px) {
+  .wrraper .banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+  }
+  .wrraper .banner_content {
+    text-align: left;
+    margin-right: 3rem;
+    align-items: flex-start;
+  }
+  .wrraper .banner_content--heading {
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .wrraper .banner_content--paragraph {
+    width: 600px;
+    margin: 2rem auto;
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+  .wrraper .banner_content--btns .btn {
+    padding: 1.1rem 2.2rem;
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .wrraper {
+    padding: 0 10rem;
+    height: 100vh;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
